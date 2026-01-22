@@ -40,7 +40,7 @@
           <div>
             <h1>Usinagem de precisão com foco em qualidade, pontualidade e confiança.</h1>
             <p class="lead">
-              Atendemos projetos sob desenho ou amostra, com rastreabilidade e compromisso com a satisfação do cliente.
+              Atendemos conforme desenho ou amostra, com rastreabilidade e compromisso com a satisfação do cliente.
             </p>
             <div class="hero-actions">
               <a class="btn primary" href="#contato">Solicitar cotação</a>
@@ -189,7 +189,7 @@
           <div class="card">
             <h3>Como cotar mais rápido</h3>
             <ul class="list">
-              <li>Enviar desenho (PDF/DWG/STEP) ou amostra</li>
+              <li>Enviar desenho PDF ou amostra</li>
               <li>Informar quantidade e prazo</li>
               <li>Material, tratamento e acabamento (se houver)</li>
               <li>Tolerâncias críticas e inspeções exigidas</li>
@@ -202,38 +202,86 @@
 
     
     <section class="section" id="galeria">
-      <div class="container">
-        <h2>Galeria de peças e acabamentos</h2>
-        <p>Alguns exemplos reais de peças usinadas e lotes produzidos na Eficaz (fotos da produção).</p>
+  <div class="container">
+    <h2>Galeria de Peças e Acabamentos</h2>
+    <p>Alguns exemplos reais de peças usinadas e lotes produzidos na Eficaz.</p>
 
-        <div class="gallery-grid">
-          <a class="gallery-item" href="assets/img/galeria/galeria-01.jpg" target="_blank" rel="noopener">
-            <img src="assets/img/galeria/galeria-01.jpg" alt="Peças usinadas - lote 01"/>
-            <div class="cap">Peças usinadas — lote e acabamento metálico.</div>
-          </a>
-          <a class="gallery-item" href="assets/img/galeria/galeria-02.jpg" target="_blank" rel="noopener">
-            <img src="assets/img/galeria/galeria-02.jpg" alt="Peças usinadas - lote 02"/>
-            <div class="cap">Componentes torneados — exemplo de variação dimensional.</div>
-          </a>
-          <a class="gallery-item" href="assets/img/galeria/galeria-03.jpg" target="_blank" rel="noopener">
-            <img src="assets/img/galeria/galeria-03.jpg" alt="Peças usinadas - lote 03"/>
-            <div class="cap">Peças em aço — visualização de lote em processo.</div>
-          </a>
-          <a class="gallery-item" href="assets/img/galeria/galeria-04.jpg" target="_blank" rel="noopener">
-            <img src="assets/img/galeria/galeria-04.jpg" alt="Peças usinadas - lote 04"/>
-            <div class="cap">Detalhes de usinagem — furos, faces e rebaixos.</div>
-          </a>
-          <a class="gallery-item" href="assets/img/galeria/galeria-05.jpg" target="_blank" rel="noopener">
-            <img src="assets/img/galeria/galeria-05.jpg" alt="Peças usinadas - lote 05"/>
-            <div class="cap">Peças zincadas/galvanizadas — acabamento brilhante.</div>
-          </a>
-          <a class="gallery-item" href="assets/img/galeria/galeria-06.jpg" target="_blank" rel="noopener">
-            <img src="assets/img/galeria/galeria-06.jpg" alt="Peças usinadas - lote 06"/>
-            <div class="cap">Peças com acabamento dourado — exemplo de material e brilho.</div>
-          </a>
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px">
+      <button id="galleryPrev" class="btn" aria-label="Ver imagens anteriores" title="Anterior">◀</button>
+      <div style="flex:1; display:flex; align-items:center; justify-content:space-between">
+        <div class="small">Deslize horizontalmente para ver mais. Use os botões para avançar/voltar.</div>
+        <button id="galleryNext" class="btn" aria-label="Ver próximas imagens" title="Próximo">▶</button>
+      </div>
+    </div>
+
+    <div class="gallery-scroll" role="region" aria-label="Galeria de peças" tabindex="0">
+      <div class="gallery-item">
+        <a href="assets/img/galeria/galeria-02.jpg" target="_blank" rel="noopener">
+          <img src="assets/img/galeria/galeria-02.jpg" alt="Peças usinadas — lote 02" loading="lazy" decoding="async" />
+          <div class="cap">Peças usinadas — lote e acabamento metálico.</div>
+        </a>
+      </div>
+
+      <div class="gallery-item">
+        <a href="assets/img/galeria/galeria-03.jpg" target="_blank" rel="noopener">
+          <img src="assets/img/galeria/galeria-03.jpg" alt="Peças usinadas — lote 03" loading="lazy" decoding="async" />
+          <div class="cap">Componentes torneados — exemplo de variação dimensional</div>
+        </a>
+      </div>
+
+      <div class="gallery-item">
+        <a href="assets/img/galeria/galeria-04.jpg" target="_blank" rel="noopener">
+          <img src="assets/img/galeria/galeria-04.jpg" alt="Peças usinadas — lote 04" loading="lazy" decoding="async" />
+          <div class="cap">Peças em aço — visualização de lote em processo.</div>
+        </a>
+      </div>
+
+      <div class="gallery-item">
+        <a href="assets/img/galeria/galeria-05.jpg" target="_blank" rel="noopener">
+          <img src="assets/img/galeria/galeria-05.jpg" alt="Peças usinadas — lote 05" loading="lazy" decoding="async" />
+          <div class="cap">Detalhes de usinagem — furos, faces e rebaixos.</div>
+        </a>
+      </div>
+
+      <div class="gallery-item">
+        <a href="assets/img/galeria/galeria-06.jpg" target="_blank" rel="noopener">
+          <img src="assets/img/galeria/galeria-06.jpg" alt="Peças usinadas — lote 06" loading="lazy" decoding="async" />
+          <div class="cap">>Peças zincadas/galvanizadas — acabamento brilhante.</div>
+        </a>
+      </div>
+
+      <div class="gallery-item">
+        <a href="assets/img/galeria/galeria-07.jpg" target="_blank" rel="noopener">
+          <img src="assets/img/galeria/galeria-07.jpg" alt="Peças usinadas — lote 07" loading="lazy" decoding="async" />
+          <div class="cap">Peças com acabamento dourado — exemplo de material e brilho.</div>
+        </a>
+      </div>
+
+      <div class="gallery-item">
+        <a href="assets/img/galeria/galeria-08.jpg" target="_blank" rel="noopener">
+          <img src="assets/img/galeria/galeria-08.jpg" alt="Peças usinadas — lote 08" loading="lazy" decoding="async" />
+          <div class="cap">Peças usinadas — exemplo de rosca com alta precisão.</div>
+        </a>
+      </div>
+
+      <div class="gallery-item" aria-label="Vídeo — visita à produção">
+        <video muted playsinline preload="metadata" controls poster="assets/img/galeria/video1-poster.svg">
+          <source src="assets/video/video1.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+        <div class="cap">
+          Vídeo — visita à produção (video1)
+          <div class="small"><a href="assets/video/video1.mp4" target="_blank" rel="noopener">Abrir em nova aba</a></div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <noscript class="small" style="display:block; margin-top:8px">
+      Sem JavaScript: use a barra de rolagem horizontal para ver as imagens.
+    </noscript>
+  </div>
+</section>
+
 
 <section class="section" id="qualidade">
       <div class="container">
@@ -378,7 +426,10 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 14.2c-.2-.1-1.3-.6-1.5-.7-.2-.1-.4-.1-.6.1-.2.2-.7.7-.9.9-.2.2-.3.2-.5.1-1.5-.7-2.6-1.6-3.6-3-.2-.2-.1-.4.1-.5.2-.2.4-.4.6-.6.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4H7.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2 0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 2.6 1.1 2.6.7 3.1.7.5 0 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4 0-.2-.2-.2-.4-.3z"/></svg>
     WhatsApp
   </a>
-
-  <script src="assets/js/main.js"></script>
+  
+  <script src="assets/js/gallery.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  
+  
 </body>
 </html>
