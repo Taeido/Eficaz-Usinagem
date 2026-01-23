@@ -19,20 +19,20 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  /* Fundo: degradê suave com tons da marca (evita "faixas" e mantém consistência ao rolar) */
+  /* Fundo: degradê suave com tons azuis do logo */
   background:
-    radial-gradient(1000px 640px at 12% 0%,
-      rgba(177, 199, 243, 0.22) 0%,
-      rgba(180,201,244,.10) 35%,
-      transparent 72%),
-    radial-gradient(900px 560px at 100% 8%,
-      rgba(112,147,211,.22) 0%,
-      rgba(112,147,211,.10) 40%,
-      transparent 74%),
+    radial-gradient(1200px 700px at 10% 5%,
+      rgba(112, 147, 211, 0.25) 0%,
+      rgba(112, 147, 211, 0.08) 40%,
+      transparent 75%),
+    radial-gradient(1000px 600px at 95% 15%,
+      rgba(28, 47, 130, 0.2) 0%,
+      rgba(28, 47, 130, 0.05) 45%,
+      transparent 78%),
     linear-gradient(180deg,
-      rgba(28,47,130,.14) 0%,
-      rgba(6, 22, 43, 0.92) 52%,
-      rgba(11,15,20,1) 100%),
+    rgba(28, 47, 130, 0.3) 0%,
+    rgba(11, 15, 20, 0.95) 50%,
+      var(--bg) 100%),
     var(--bg);
   color:var(--text);
   line-height:1.5;
@@ -50,14 +50,14 @@ a{color:inherit; text-decoration:none}
 }
 .nav{
   display:flex; align-items:center; justify-content:space-between;
-  padding:14px 0;
+  padding:10px 0;
 }
 .brand{display:flex; gap:12px; align-items:center}
 .brand img{height:44px; width:auto}
 .brand .brand-title{
   font-weight:800;
   letter-spacing:.02em;
-  font-size:16px;
+  font-size:20px;
   text-transform:none;
 }
 .brand .tag{font-size:12px; color:var(--muted); margin-top:2px}
@@ -331,13 +331,13 @@ textarea{min-height:120px; resize:vertical}
 
 /* Logo maior no cabeçalho */
 .brand img {
-  height: 64px;
+  height: 100px;
   width: auto;
   display: block;
 }
 
 @media (max-width: 700px) {
-  .brand img { height: 50px; }
+  .brand img { height: 60px; }
 }
 
 /* Marca d'água fixa ao fundo */
@@ -349,7 +349,7 @@ body::before {
   background-repeat: no-repeat;
   background-position: center 140px; /* ajuste fino se quiser */
   background-size: 40rem;
-  opacity: 0.06; /* não atrapalhar leitura */
+  opacity: 0.09; /* não atrapalhar leitura */
   pointer-events: none;
   z-index: 0;
   filter: grayscale(100%) contrast(.9);
@@ -371,13 +371,32 @@ header, main, footer, .topbar, .container {
   -webkit-overflow-scrolling: touch;
 }
 
+.gallery-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-scroll::-webkit-scrollbar-track {
+  background: rgba(31, 42, 58, 0.4);
+  border-radius: 10px;
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb {
+  background: rgba(112, 147, 211, 0.5);
+  border-radius: 10px;
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(112, 147, 211, 0.7);
+}
+
 .gallery-item {
   width: 260px;
   flex: 0 0 auto;
   border-radius: 8px;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(6,10,15,0.04);
+  background: rgba(15, 22, 35, 0.55);
+  border: 1px solid rgba(31, 42, 58, 0.85);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 
 .gallery-item a {
@@ -398,7 +417,7 @@ header, main, footer, .topbar, .container {
 .gallery-item .cap {
   padding: 8px 10px;
   font-size: 13px;
-  color: #2b3b4a;
+  color: var(--muted);
 }
 
 @media (max-width: 700px) {
